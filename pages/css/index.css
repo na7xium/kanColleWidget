@@ -92,3 +92,6 @@ div#info-band {
 div#info-band>a {
   text-decoration: none;
 }
+.hatena-bookmark-button-frame {
+  margin-left: 40px;
+}
