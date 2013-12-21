@@ -26,11 +26,11 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<!-- div id="info-band">
+<div id="info-band">
   <a href="https://chrome.google.com/webstore/detail/%E8%89%A6%E3%81%93%E3%82%8C%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/iachoklpnnjfgmldgelflgifhdaebnol">
     感謝! 3万インストール
   </a>
-</div -->
+</div>
 <div id="header">
 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://otiai10.github.io/kanColleWidget/" data-lang="ja">ツイート</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
@@ -38,7 +38,9 @@
 <a href="http://b.hatena.ne.jp/entry/http://otiai10.github.io/kanColleWidget/" class="hatena-bookmark-button" data-hatena-bookmark-title="艦これウィジェット プロジェクトページ" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
 </div>
 <h1 class="xlarge">艦これウィジェット <img src="src/img/icon.png" /></h1>
-艦これウィジェットは<br>推奨環境であるChromeブラウザを艦これに最適化させるChrome拡張です
+<div>
+  艦これウィジェットは<br>推奨環境であるChromeブラウザを艦これに最適化させるChrome拡張です
+</div>
 
 <div id="twitter-stream">
   <a class="twitter-timeline" href="https://twitter.com/search?q=%E8%89%A6%E3%81%93%E3%82%8C%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88" data-widget-id="390412681213001728">艦これウィジェット に関するツイート</a>
@@ -47,97 +49,117 @@
 
 <h1>使い方</h1>
 <ul>
-  <li>インストールはこちらから。で、準備完了<br>
-    <a href="https://chrome.google.com/webstore/detail/%E8%89%A6%E3%81%93%E3%82%8C%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/iachoklpnnjfgmldgelflgifhdaebnol">
-      Chrome ウェブストア - 艦これウィジェット
-    </a>
+  <li>インストール
+    <ul>
+      <li>
+        <a href="https://chrome.google.com/webstore/detail/%E8%89%A6%E3%81%93%E3%82%8C%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/iachoklpnnjfgmldgelflgifhdaebnol">
+          Chrome ウェブストア-艦これウィジェット
+        </a>から手軽にインストールできます
+      </li>
+    </ul>
   </li>
-  <li>拡張アイコンを右クリックから簡単に削除/アンインストールできます</li>
+  <li>アンインストール
+    <ul>
+      <li>
+        <a href="https://support.google.com/chrome/answer/113907?hl=ja">拡張機能をアンインストール</a>で手軽にアンインストールできます
+      </li>
+    </ul>
+  </li>
 </ul>
 
+<h1>特徴</h1>
+艦これ関係のツールはたくさんありますが、艦これウィジェットの特徴は
+<ol>
+  <li><u>Chromeブラウザ（推奨環境）である</u></li>
+  <li><u>本家サーバにAPIリクエストを一切送らない</u></li>
+</ol>
+の2点のみです。高機能な環境をお求めの方は、別のツールの使用をおすすめします。
 
-<h1>機能</h1>
-<ul>
-    <li>機能概要
-        <ul>
-            <li>艦これだけの別窓を開いてくれます</li>
-            <li>遠征・入渠・建造のタイマーを自動で設定してくれます</li>
-            <li>通知します</li>
-            <li>その他艦娘ぺろぺろ（詳しくは詳細設定をご覧ください）</li>
-        </ul>
-    </li>
-    <li>
-      参考資料 <a href="http://www.slideshare.net/otiai10/ss-26631311">加賀さんと僕〜艦これウィジェットの紹介と説明〜</a>
-    </li>
-</ul>
+<h1>紹介</h1>
+<a href="https://www.slideshare.net/otiai10/ss-26631311" title="加賀さんと僕 ~艦これウィジェットの紹介と説明~" target="_blank">加賀さんと僕 ~艦これウィジェットの紹介と説明~</a>
+<div class="boxy l-contents">
+  <div>
+    <iframe src="http://www.slideshare.net/slideshow/embed_code/26631311" width="246" height="220" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+  </div>
+  <div class="box-r">
+    <ul><li>現在までに実装されている機能
+      <ul>
+        <li>大きさ変えれるウィジェット化機能</li>
+        <li>遠征・入渠・建造完了自動通知</li>
+        <li>スクショ</li>
+        <li>デイリー任務進捗管理</li>
+        <li>簡易疲労度メーター</li>
+        <li>開発・建造報告Twitter連携</li>
+        <li>クロックモード(ダッシュボード機能)</li>
+        <li>etc</li>
+      </ul>
+    </li></ul>
+  </div>
+</div>
 
+<h1>実装</h1>
+<a href="https://www.slideshare.net/otiai10/ss-26908975" title="加賀さんと僕（実装編）〜艦これウィジェットの課題と実装〜" target="_blank">加賀さんと僕（実装編）〜艦これウィジェットの課題と実装〜</a>
+<div class="boxy l-contents">
+  <div>
+    <iframe src="http://www.slideshare.net/slideshow/embed_code/26908975" width="246" height="220" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+  </div>
+  <div class="box-r">
+    <ul><li>実装の特徴
+      <ul>
+        <li>GoogleChromeExtension</li>
+        <li>通知はlocalStorageを監視</li>
+        <li>動的な時間は、画像処理で取得</li>
+        <li>画像処理サーバはPython (Flask)</li>
+        <li>ログサーバはGo (Revel)</li>
+        <li>etc</li>
+      </ul>
+    </li></ul>
+  </div>
+</div>
 
-<h1>よくある質問</h1>
+<h1>サービス設計</h1>
+<a href="https://www.slideshare.net/otiai10/ss-29156715" title="加賀さんと僕 〜艦これウィジェットの新機能とか〜" target="_blank">加賀さんと僕 〜艦これウィジェットの新機能とか〜</a>
+<div class="boxy l-contents">
+  <div>
+    <iframe src="http://www.slideshare.net/slideshow/embed_code/29156715" width="246" height="220" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+  </div>
+  <div class="box-r">
+    <ul><li>サービス設計
+      <ul>
+        <li>ゲーム内のユーザ体験を改変しない</li>
+        <li>ゲーム内行動の自動化はしない</li>
+        <li>ゲーム<strong>外</strong>行動のサポートをする</li>
+        <li>ユーザ体験ベースの機能追加をする</li>
+        <li>艦これたのしいし長く続いてほしいです</li>
+      </ul>
+    </li></ul>
+  </div>
+</div>
 
-<ul>
-    <li>専ブラなんすか？
-        <ul>
-            <li>専ブラではありません！Chrome(推奨環境)です！</li>
-        </ul>
-    </li>
-    <li>規約違反なんすか？
-        <ul>
-            <li>Chromeなので、<pre class="inline">（8）不正な方法（特殊なプログラムを介しての）でのアクセスを試みる行為</pre>には該当しないと考えております</li>
-        </ul>
-    </li>
-    <li>チートできないんすか？
-        <ul>
-            <li>チート要素は一切実装しておりません。ｻーｾﾝ</li>
-        </ul>
-    </li>
-    <li>その他頂いている機能改善やバグ報告など
-        <ul>
-            <li><a href="https://github.com/otiai10/kanColleWidget/issues?labels=question&page=1&state=open">issues/question/open</a></li>
-        </ul>
-    </li>
-</ul>
 
 <h1>お問い合わせ/機能要望/バグ報告</h1>
 <ul>
-    <li>Twitterから
+    <li><a href="">艦これウィジェット トラブルシューティング</a></li>
+    <li><a href="https://github.com/otiai10/kanColleWidget/issues?labels=question&page=1&state=open">現在頂いている要望・お問い合わせ</a></li>
+    <li>お問い合わせ
         <ul>
-            <li><a href="https://twitter.com/otiai10">twitter.com/otiai10</a></li>
+            <li><a href="https://twitter.com/otiai10">Twitterから</a></li>
+            <li><a href="https://github.com/otiai10/kanColleWidget/issues/new">GitHubから</a></li>
         </ul>
     </li>
-    <li>GitHubから
-        <ul>
-            <li><a href="https://github.com/otiai10/kanColleWidget/issues/new">github.com/otiai10/kanColleWidget/issues/new</a></li>
-        </ul>
-    </li>
-</ul>
-
-<h1>実装</h1>
-<ul>
-    <li>以下の3点に最大限配慮して実装しています
-        <ul>
-            <li>艦これの規約に違反しないこと</li>
-            <li>艦これサーバに負荷をかけないこと</li>
-            <li>艦これの面白さを損なわないこと</li>
-        </ul>
-    </li>
-    <li>
-      参考資料 <a href="http://www.slideshare.net/otiai10/ss-26908975">加賀さんと僕（実装編）〜艦これウィジェットの課題と実装〜</a>
-    </li>
-</ul>
-
-
-<h1>開発</h1>
-
-<ul>
-  <li>
-    以下のレポジトリでOSS開発をしております。pull-reqお待ちしております！<br>
-    <a href="https://github.com/otiai10/kanColleWidget">https://github.com/otiai10/kanColleWidget</a>
-  </li>
 </ul>
 
 <h1>リリースノート（ながいので注意!）</h1>
 
 <pre id="release-note">
+- 2013/12/20 v0.7.0.3, v0.7.0.4
+    - あんまり見てくれないのでアップデート通知をつくりました
+    - スクショ時のクラッシュ対応（現在調査・改善中）
+    - メンテ情報表示設定追加
+    - ファイル設定UIを改善
+    - ソフトウェアテスト強化
+    - 自動取得時に表示される装備娘を追加
+    - TODO : クラッシュ問題改善
 - 2013/12/06 v0.6.1.1
     - デイリー任務消化表から直接[達成]にできるUIを追加
 - 2013/12/05 v0.6.0.4

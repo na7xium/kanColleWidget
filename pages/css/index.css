@@ -45,6 +45,7 @@ h1 {
   clear: both;
   float: right;
   width:400px;
+  margin-top: 20px;
 }
 
 .xlarge {
@@ -94,4 +95,14 @@ div#info-band>a {
 }
 .hatena-bookmark-button-frame {
   margin-left: 40px;
+}
+
+.boxy {
+  display: -webkit-box;
+}
+.l-contents {
+  width: 520px;
+}
+.box-r {
+  width: 310px;
 }
