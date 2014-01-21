@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="src/img/icon.png">
     <title>艦これウィジェット プロジェクトページ</title>
     <meta charset="utf-8">
+    <script type="text/javascript" src="pages/js/release-info.js"></script>
 </head>
 <body>
 <!--
@@ -26,11 +27,11 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div id="info-band">
+<!-- div id="info-band">
   <a href="https://chrome.google.com/webstore/detail/%E8%89%A6%E3%81%93%E3%82%8C%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/iachoklpnnjfgmldgelflgifhdaebnol">
     感謝! 3万インストール
   </a>
-</div>
+</div -->
 <div id="header">
 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://otiai10.github.io/kanColleWidget/" data-lang="ja">ツイート</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
@@ -152,6 +153,51 @@
 <h1>リリースノート（ながいので注意!）</h1>
 
 <pre id="release-note">
+- 2014/01/21 v0.8.6.3
+    - Chrome32のバグを回避する設定の改善
+- 2014/01/19 v0.8.6.2
+    - Chrome32のバグを回避する設定の改善
+    - スクショ結果に余黒領域を含めない修正
+- 2014/01/17 v0.8.6.1
+    - Chrome32のWindowsにおけるファッキンバグを回避する設定を追加
+- 2014/01/16 v0.8.5.5
+    - "ページ応答なし"っていうのが超出る問題について
+    - (お知らせだけ更新)
+- 2014/01/15 v0.8.5.3
+    - 任務名の誤りを修正
+    - 妖精さん名の誤りを修正
+- 2014/01/13 v0.8.5.2
+    - クロックモードからリマインダ解除に対するUIを改善
+    - 簡易疲労回復通知の通知音声個別設定を追加
+    - 建造完了だけは時間ぴったりに通知する
+    - クロックモードのhover改善
+    - 遠征帰投通知に【遠征名】を追加
+    - 時間取得中の妖精さんを追加
+    - 遠征完了通知オフだと任務実績集計されていなかったバグを修正
+- 2014/01/09 v0.8.3.0
+    - 艦娘状態窓をクリックするとウィジェットにフォーカスする変更
+    - ポップアップ背景画像をちょっと見やすく修正
+- 2014/01/07 v0.8.2.0, v0.8.2.1
+    - 艦娘状態窓の前回位置を記憶する修正
+    - Windowsでの艦娘状態窓の見切れを修正
+- 2014/01/05 v0.8.0.0, v0.8.0.1
+    - 大破進撃を防止する設定を追加
+- 2013/12/31 v0.7.5.0
+    - 音声ファイル設定UIの改善
+    - 一部環境でFlashの描画が止まる問題のお知らせ
+    - お正月だし艦娘！
+- 2013/12/28 v0.7.4.0
+    - クロックモードのバグ修正
+    - favicon追加
+- 2013/12/25 v0.7.3.0
+    - 大型建造報告の対応
+- 2013/12/24 v0.7.2.0, v0.7.2.1
+    - スクショ時のクラッシュ問題を解決
+    - 予定の表示順設定が反映されないバグを修正
+- 2013/12/23 v0.7.1.0
+    - リファクタリング
+    - 残り時間表示設定を追加
+    - 期間限定エフェクト追加
 - 2013/12/20 v0.7.0.3, v0.7.0.4
     - あんまり見てくれないのでアップデート通知をつくりました
     - スクショ時のクラッシュ対応（現在調査・改善中）
