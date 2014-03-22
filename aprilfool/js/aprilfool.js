@@ -1,6 +1,6 @@
 var Aprilfool = {};
 Aprilfool.getReason = function(){
-    if (Math.random() < 0.4) return Aprilfool.Reasons.normal;
+    if (Math.random() < Aprilfool.specialRate) return Aprilfool.Reasons.normal;
     return Aprilfool.ArrayRand(Aprilfool.Reasons.special);
 }
 Aprilfool.ArrayRand = function(arr){
@@ -25,6 +25,7 @@ Aprilfool.toQueryString = function(obj){
 }
 Aprilfool.theReason = "";
 Aprilfool.theConclusion = "艦これウィジェットやめます！";
+Aprilfool.specialRate = 0.5;
 Aprilfool.Reasons = {
     normal: "垢BANされるらしいので、",
     special: [
