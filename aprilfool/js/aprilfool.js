@@ -11,7 +11,7 @@ Aprilfool.Twitter = {
         var params = {
             text: text,
             hashtags: Aprilfool.HashTags,
-            url: encodeURIComponent(Aprilfool.URL)
+            url: Aprilfool.URL
         };
         window.open(Aprilfool.TwiterIntentURL + Aprilfool.toQueryString(params));
     }
@@ -19,7 +19,7 @@ Aprilfool.Twitter = {
 Aprilfool.toQueryString = function(obj){
     var params = [];
     for (key in obj) {
-        params.push(key + "=" + obj[key]);
+        params.push(key + "=" + encodeURIComponent(obj[key]));
     }
     return "?" + params.join("&");
 }
