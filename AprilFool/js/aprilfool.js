@@ -34,7 +34,7 @@ Aprilfool.Reasons = {
 }
 Aprilfool.URL = "http://otiai10.github.io/kanColleWidget/AprilFool";
 Aprilfool.TwiterIntentURL = "https://twitter.com/intent/tweet";
-Aprilfool.HashTags = "春のBANまつり";
+Aprilfool.HashTags = "春のBANまつり,AprilFool";
 window.onload = function(){
     Aprilfool.theReason = Aprilfool.getReason();
     var theText = Aprilfool.theReason + Aprilfool.theConclusion;
