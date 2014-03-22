@@ -25,6 +25,9 @@ h1#title {
     font-style: italic;
     font-weight: bold;
 }
+span.accent {
+    color: yellow;
+}
 #wrapper {
     margin: 0;
     padding: 20px 0;
