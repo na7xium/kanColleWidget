@@ -26,12 +26,10 @@ Aprilfool.toQueryString = function(obj){
 }
 Aprilfool.theReason = "";
 Aprilfool.theConclusion = "艦これウィジェットやめます！";
-Aprilfool.specialRate = 0.7;
+Aprilfool.specialRate = 0.9;
 Aprilfool.Reasons = {
     normal: [
-        "垢BANされるらしいので、",
-        "彼女ができたので、",
-        "彼氏ができたので、"
+        "垢BANされるらしいので、"
     ],
     special: [
         "長門さんの一発が強すぎるので、",
