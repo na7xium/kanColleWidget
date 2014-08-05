@@ -39,10 +39,10 @@ module KCW {
             }).shift();
         }
         private notifyTimeUp() {
-            console.log("notify all -> ", this.timeUpEvents);
+            $.map(this.timeUpEvents, (event: EventModel) => { event.notify(); });
         }
         private displayNearest() {
-            console.log("display nearest -> ", this.nearestEndEvent);
+            if (this.nearestEndEvent) this.nearestEndEvent.displayBadge();
         }
     }
 }
