@@ -9,9 +9,8 @@ module KCW {
         private messageRouter: MessageRouter = new MessageRouter();
         constructor() {}
         public start() {
-            console.log("Background started");
             // 1. イントオブザーバ
-            console.log(this.observer);
+            this.observer.start();
             // 2. リクエストルータ
             console.log(this.requestRouter);
             // 3. メッセージルータ
