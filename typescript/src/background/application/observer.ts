@@ -1,15 +1,12 @@
 /// <reference path="../domain/events/mission/mission-repo.ts" />
 module KCW {
-    // Observer
-    // ローカルストレージに保存されている
-    // 各種イベントの時間切れなどを監視し、
-    // 適切なイベントを発火させる
     export class Observer {
         private durationMSec: number = 5000;
         private intervalId: number;
         private allEvents: EventModel[];
+        private timeUpEvents: EventModel[];
+        private nearestEndEvent: EventModel;
         private missionRepository = new MissionRepository();
-        constructor() {}
         start(): number {
             this.intervalId = setInterval(() => {
                 this.check();
@@ -18,12 +15,34 @@ module KCW {
         }
         private check() {
             this.restoreAllEvents();
-            console.log("this.allEvents", this.allEvents);
+            this.detectTimeUpEvents();
+            this.detectNearestEndEvent();
+            this.notifyTimeUp();
+            this.displayNearest();
         }
         private restoreAllEvents() {
             this.allEvents = [].concat(
                 this.missionRepository.getAll()
-            );
+            ).sort((former: EventModel, latter: EventModel) => {
+                if (former.finish > latter.finish) return 1;
+                return -1;
+            });
+        }
+        private detectTimeUpEvents() {
+            this.timeUpEvents = $.map(this.allEvents,(event: EventModel) => {
+                if (event.finish < Date.now()) return event;
+            });
+        }
+        private detectNearestEndEvent() {
+            this.nearestEndEvent = $.map(this.allEvents, (event: EventModel) => {
+                if (event.finish > Date.now()) return event;
+            }).shift();
+        }
+        private notifyTimeUp() {
+            console.log("notify all -> ", this.timeUpEvents);
+        }
+        private displayNearest() {
+            console.log("display nearest -> ", this.nearestEndEvent);
         }
     }
 }

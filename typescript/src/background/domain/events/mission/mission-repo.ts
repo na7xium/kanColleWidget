@@ -8,7 +8,7 @@ module KCW {
             super("missions");
         }
         getAll(): Mission[] {
-            return $.map(this.get(), (stored) => {
+            return $.map(this.get() || [], (stored) => {
                 return MissionFactory.create(stored);
             });
         }

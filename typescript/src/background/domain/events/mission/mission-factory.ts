@@ -2,6 +2,7 @@
 module KCW {
     export class MissionFactory {
         public static create(stored: Object): Mission {
+            if (! stored["finish"]) return;
             return new Mission(
                 stored["deck_id"],
                 stored["finish"],
