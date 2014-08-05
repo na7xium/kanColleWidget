@@ -11,3 +11,8 @@ GRTAGS
 GTAGS
 node_modules/*
 src/js/AppConfig.js
+
+# TypeScript
+typescript/build
+typescript/bower_components
+typescript/node_modules

@@ -1,0 +1,8 @@
+{
+  "name": "kanColleWidget",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-typescript": "0.2.0"
+  }
+}
