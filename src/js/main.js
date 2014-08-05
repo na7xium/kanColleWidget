@@ -158,3 +158,7 @@ var KanColleWidget = KanColleWidget || {};
         }
     });
 })();
+
+// FIXME: デバッグ
+var bg = new KCW.Background();
+bg.start();
