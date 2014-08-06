@@ -15,7 +15,7 @@ module KCW {
             // reject if invalid
             return this.validation.resolve();
         }
-        main() {
+        main(): JQueryPromise {
             // reject if error
             return this.result.resolve();
         }
