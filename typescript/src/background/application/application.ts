@@ -14,7 +14,7 @@ module KCW {
             // 2. リクエストルータ
             console.log(this.requestRouter);
             // 3. メッセージルータ
-            console.log(this.messageRouter);
+            this.messageRouter.listen();
         }
     }
 }
