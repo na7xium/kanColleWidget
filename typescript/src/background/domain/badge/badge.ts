@@ -22,7 +22,7 @@ module KCW {
             this.colorCode = '#0FABB1';
         }
         private withHour(diff: number) {
-            this.text = String(Math.floor(diff / Time.Hour)) + 'h';
+            this.text = String(Math.floor(diff / Time.Hour)) + 'h+';
             this.colorCode = '#0FABB1';
         }
         public display() {
