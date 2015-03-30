@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>2015 春のBANまつり！ - 艦これウィジェット</title>
-    <link rel="shortcut icon" href="../src/img/icon.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="../../src/img/icon.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="css/aprilfool.css">
+    <script src="../../src/js/jquery.min.js"></script>
+    <script src="js/aprilfool.js"></script>
   </head>
   <body>
     <div class="container">
@@ -14,10 +16,7 @@
                 <h1 class="biggest">嘘です</h1>
             </div>
             <div class="col-md-6">
-                <p class="js-text-to-tweet" contenteditable>
-                    艦これウィジェット使ってたら彼女ができたので、これぜったい垢BAN対象だと思います。
-                    <br>
-                    #春のBANまつり
+                <p id="js-text-to-tweet" contenteditable>
                 </p>
                 <button id="js-tweet-now" class="btn btn-info"><img src="img/twitter.png"> tweet</button>
             </div>
@@ -80,7 +79,11 @@
                 </div>
             </div>
             <div class="col-sm-6">
-                <span class="copyright pull-right" style="margin-top: 80px; color: rgba(180, 180, 180, 0.5);">Copyright © otiai10. All Rights Reserved.</span>
+                <span class="copyright pull-right" style="margin-top: 70px; color: rgba(180, 180, 180, 0.5);">Copyright © otiai10. All Rights Reserved.</span>
+                <div style="margin-top: 70px; margin-right: 80px;" class="pull-right">
+                <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                </div>
             </div>
         </div>
     </div>
