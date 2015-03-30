@@ -26,7 +26,7 @@ Aprilfool.toQueryString = function(obj){
 }
 Aprilfool.thePrefix = "艦これウィジェット使ってたら";
 Aprilfool.theReason = "";
-Aprilfool.theConclusion = "これぜったい垢BAN対象だと思います。";
+Aprilfool.theConclusion = "これぜったい垢BAN対象だと思います！";
 Aprilfool.specialRate = 0.3;
 Aprilfool.Reasons = {
     normal: [
