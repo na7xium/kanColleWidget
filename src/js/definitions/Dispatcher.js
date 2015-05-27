@@ -5,6 +5,18 @@ var KanColleWidget = KanColleWidget || {};
         this.keyword = null;
         this.params  = null;
         this.rawData = null;
+        /* TODO
+        this.missionAction = new KanColleWidget.MissionAction();
+        this.paymentAction = new KanColleWidget.PaymentAction();
+        this.practiceAction = new KanColleWidget.PracticeAction();
+        this.mapAction = new KanColleWidget.MapAction();
+        this.hokyuAction = new KanColleWidget.HokyuAction();
+        this.kaisouAction = new KanColleWidget.KaisouAction();
+        this.kousyouAction = new KanColleWidget.KousyouAction();
+        this.nyukyoAction = new KanColleWidget.NyukyoAction();
+        this.questAction = new KanColleWidget.QuestAction();
+        this.sortieBattleAction = new KanColleWidget.SortieBattleAction();
+        */
     };
     Dispatcher.prototype.eat = function(data){
         this.rawData = data;
@@ -32,7 +44,12 @@ var KanColleWidget = KanColleWidget || {};
                 this.action.forNyukyoPreparation();
                 break;
             case 'api_req_practice/battle':
+                KCW.NightStatusDetector.start();
                 this.action.forPracticeBattle(this.params);
+                break;
+            case 'api_req_practice/battleresult':
+                // tmp
+                KCW.NightStatusDetector.kill();
                 break;
             case 'api_req_map/start':
                 this.action.forMapStart(this.params);

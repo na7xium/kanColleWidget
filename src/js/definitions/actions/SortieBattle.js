@@ -5,6 +5,8 @@ var KanColleWidget = KanColleWidget || {};
     };
     SortieBattleAction.prototype.forResult = function(params){
 
+        KCW.NightStatusDetector.kill();
+
         if (! Config.get('show-ships-status')) return;
 
         if (params.combined) {
@@ -19,6 +21,7 @@ var KanColleWidget = KanColleWidget || {};
         // 3200 でもギリの時があった
     };
     SortieBattleAction.prototype.forBattle = function(){
+        KCW.NightStatusDetector.start();
         KCW.ShipsStatusWindow.sweep();
     };
 })();
