@@ -1,11 +1,11 @@
 var Constants = {
     release : {
-        version: "v1.5.10.4",
-        link: 'https://github.com/otiai10/kanColleWidget/pull/523',
-        announceVersion : 120,
+        version: "v1.5.24",
+        link: 'https://github.com/otiai10/kanColleWidget/pull/544',
+        announceVersion : 133,
         announcements   : [
-            "設定画面の[報告系・その他]が出てないバグを修正",
-            "[サーバ] OCRサーバの挙動安定化"
+            "運営電文が取得できてないやつ修正",
+            "運営電文に変なボタン出てるやつ修正"
         ]
     },
     area: ["鎮守府海域","南西諸島海域","北方海域","西方海域","南方海域"],
@@ -180,6 +180,13 @@ var Constants = {
             require: [null, 6, {ab:2,dd:2}],
             area: 2
         },
+        "24": {
+            minute: 500,
+            title: '北方航路海上護衛',
+            reward: [65, 0, 500, 0, 0],
+            require: [50, 6, {lc:1, dd:4}],
+            area: 2
+        },
         // 西方海域
         "25": {
             minute:2400,
@@ -287,6 +294,13 @@ var Constants = {
             require:[3, 5, {st:1}],
             area: 4
         },
+        "40": {
+            minute:410,
+            title: '水上機前線輸送',
+            reward: [60, 0, 300, 300, 0, 100],
+            require: [25, 6, {lc:1,sc:2,dd:2}],
+            area: 4
+        },
         // 索敵機、発艦始め！
         "117": {
             minute:15,
@@ -319,15 +333,15 @@ var Constants = {
     },
     widget : {
         title : {
-            rate : 0.99,
+            rate : 1,// しばらくなしで
             default : [
                 "艦これウィジェット",
                 "艦これウィジェット",
                 "艦これウィジェット",
-                "艦これウィジェット",
-                "あかつきの水平線に勝利を刻むのです",
+                "艦これウィジェット"
             ],
             special : [ // セリフ。
+                "あかつきの水平線に勝利を刻むのです",
                 "抜錨！",
                 "提督...お前ちょっと、ウザい！",
                 "お前に最高の勝利を与えてやる",
