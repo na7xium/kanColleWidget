@@ -1,5 +1,6 @@
 $(function(){
-    $.get("https://cdn.rawgit.com/otiai10/kanColleWidget/develop/RELEASENOTES.md", function(res) {
-        $("#release-note").text(res);
-    });
+  var releasenotes = "https://raw.githubusercontent.com/otiai10/kanColleWidget/develop/RELEASENOTES.md";
+  $.get(releasenotes, function(res) {
+    $("#release-note").text(res);
+  });
 });
