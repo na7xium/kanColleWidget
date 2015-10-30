@@ -1,7 +1,7 @@
 module.exports = (grunt) =>
     grunt.initConfig
         pkg: grunt.file.readJSON 'package.json'
-        exec:
+        exec: if 'win32' != process.platform then (
             sample:
                 cmd: 'ls'
             build:
@@ -10,7 +10,18 @@ module.exports = (grunt) =>
                 cmd: 'sh cli/build'
                 stdout: false
             boot:
-                cmd: 'npm install; bower install; sh cli/boot'
+                cmd: 'npm install && bower install && sh cli/boot'
+        ) else (
+            sample:
+                cmd: 'node cli/ls.js'
+            build:
+                cmd: 'node cli/build.js'
+            buildquiet:
+                cmd: 'node cli/build.js'
+                stdout: false
+            boot:
+                cmd: 'npm install && bower install && node cli/boot.js'
+        )
         regarde:
             src:
                 files: [
