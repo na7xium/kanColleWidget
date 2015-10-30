@@ -18,7 +18,7 @@
     "艦これウィジェット"
   ],
   "author": "otiai10",
-  "license": "BSD",
+  "license": "MIT",
   "dependencies": {
     "grunt": "*",
     "grunt-exec": "*",
