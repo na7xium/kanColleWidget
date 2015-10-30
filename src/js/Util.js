@@ -200,7 +200,7 @@ var Util = Util || {};
     };
 
     Util._isWidgetURL = function(url) {
-        if(url.match(/^http:\/\/osapi.dmm.com\/gadgets\/ifr/)){
+        if(url.match(/^http:\/\/osapi\.dmm\.com\/gadgets\/ifr\?&?([^#]*&)*aid=854854([&#]|$)/)){
             return true;
         }
         return false;

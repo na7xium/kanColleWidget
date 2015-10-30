@@ -4,8 +4,8 @@
 
 module KCW {
     export class WindowFinder {
-        private static kcwExp: RegExp = /^http:\/\/osapi.dmm.com\/gadgets\/ifr/;
-        private static dmmExp: RegExp = /^http:\/\/www.dmm.com\/.+\/app_id=854854/;
+        private static kcwExp: RegExp = /^http:\/\/osapi\.dmm\.com\/gadgets\/ifr\?&?([^#]*&)*aid=854854([&#]|$)/;
+        private static dmmExp: RegExp = /^http:\/\/www\.dmm\.com\/.+\/app_id=854854/;
         public static findKCWidget(): JQueryPromise<chrome.windows.Window> {
             return Infra.detectWindow([WindowFinder.kcwExp, WindowFinder.dmmExp]);
         }

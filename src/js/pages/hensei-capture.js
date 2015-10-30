@@ -22,7 +22,7 @@ angular.module("kcw", []).controller("HenseiCapture", function($scope) {
           if (!tab || !tab.url) {
             return;
           }
-          if (tab.url.match("http://osapi.dmm.com/gadgets/ifr")) {
+          if (tab.url.match(/^http:\/\/osapi\.dmm\.com\/gadgets\/ifr\?&?([^#]*&)*aid=854854([&#]|$)/)) {
             ok(win, tab);
           } else if (tab.url === "http://www.dmm.com/netgame/social/-/gadgets/=/app_id=854854/?widget=true") {
             ok(win, tab);

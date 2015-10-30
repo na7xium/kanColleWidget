@@ -20,7 +20,7 @@ module KCW {
     }
 
     export function sendMessageToContentScript(msg: any) {
-        chrome.tabs.query({url:'http://osapi.dmm.com/gadgets/ifr*'}, function(tabs) {
+        chrome.tabs.query({url:'http://osapi.dmm.com/gadgets/ifr?*aid=854854*'}, function(tabs) {
             if (!tabs || tabs.length == 0) {
                 return;
             }
