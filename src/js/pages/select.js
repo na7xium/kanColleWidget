@@ -83,6 +83,13 @@ function _toggleArea(e, sw){
     affectPopupBackground();
 
     var this_select_window = window;
+    $('#launch-safely-resizable').on('click', function () {
+        // サイズ選ぶところが複数あっても使いづらいだろうしAPPモードのサイズ指定使おう
+        var mode = $('select[name=mode]').val();
+        Tracking.set('mode', mode);
+        Util.openSafeModeResizable(mode);
+    });
+
     $('#launch-safely').on('click',function(){
         Util.openSafeMode();
     });

@@ -813,6 +813,50 @@ var Util = Util || {};
         });
     };
 
+    Util.openSafeModeResizable = function (mode) {
+        var width;
+        if (mode) {
+            var keys = Object.keys(Constants.widget.width);
+            for (var i = 0, j = keys.length; i < j; i+=1) {
+                if (mode === Constants.widget.width[keys[i]].mode) {
+                    width = keys[i] |0; // parseInt(key[i])
+                }
+            }
+        }
+        if (!width) { width = 800; }
+        var height = width * Constants.widget.aspect;
+        var pos = Tracking.get('widget').position;
+        var type = Config.get('hide-adressbar-in-safemode') ? 'popup' : 'normal';
+        // create window
+        new Promise(function (resolve) {
+            chrome.windows.create({
+                url: 'http://www.dmm.com/netgame/social/-/gadgets/=/app_id=854854/',
+                width:  width,
+                height: height,
+                left: pos.left,
+                top: pos.top,
+                type: type
+            }, resolve);
+        })
+        .then(function (win) {
+            var tab = win.tabs[0];
+            // タブの幅は縮小できる限界があるので指定した値より大きかったりする(豆サイズ)
+            // その場合は最小幅を基準に高さも再計算
+            if (width < tab.width) {
+                width = tab.width;
+                height = Math.round(width * Constants.widget.aspect);
+            }
+            return new Promise(function (resolve) {
+                // フレーム分を考慮した値で指定し直す
+                chrome.windows.update(win.id, {
+                    width: win.width - tab.width + width,
+                    height: win.height - tab.height + height
+                }, resolve);
+            });
+        })
+        .catch(function (err) { console.error(err); });
+    };
+
     Util.openPanelMode = function(mode, callback) {
       var kanColleUrl = 'http://www.dmm.com/netgame/social/-/gadgets/=/app_id=854854/?mode='+mode;
       // どのサイズにするのか
