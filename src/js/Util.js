@@ -156,7 +156,7 @@ var Util = Util || {};
             return parseInt(window.navigator.appVersion.match(/Chrome\/(\d+)\./)[1], 10);
         },
         isWindows: function(){
-            if (navigator.userAgent.match(/Win/) || navigator.platform.indexOf('Win') !== -1) return true;
+            if (/Win/.test(navigator.userAgent) || navigator.platform.indexOf('Win') !== -1) return true;
             return false;
         },
         debug : function(){
@@ -200,13 +200,13 @@ var Util = Util || {};
     };
 
     Util._isWidgetURL = function(url) {
-        if(url.match(/^http:\/\/osapi\.dmm\.com\/gadgets\/ifr\?&?([^#]*&)*aid=854854([&#]|$)/)){
+        if(/^http:\/\/osapi\.dmm\.com\/gadgets\/ifr\?&?([^#]*&)*aid=854854([&#]|$)/.test(url)){
             return true;
         }
         return false;
     };
     Util._isDMMURL = function(url) {
-        if(url.match(/^http:\/\/www.dmm.com\/.+\/app_id=854854/)) {
+        if(/^http:\/\/www.dmm.com\/.+\/app_id=854854/.test(url)) {
             return true;
         }
         return false;

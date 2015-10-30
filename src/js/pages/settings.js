@@ -99,7 +99,7 @@ function affectConfigInView(){
         }
 
         var input = document.getElementById(key);
-        if(key.match(/volume/)) {
+        if(/volume/.test(key)) {
             input.value = config[key];
         }
 
@@ -107,9 +107,9 @@ function affectConfigInView(){
         if(typeof config[key] === 'boolean'){
             input.checked = config[key];
         } else if(typeof config[key] === 'string') {
-            if(key.match('notification-stay-visible')) { continue; }
-            if(key.match('offset-millisec')) { continue; }
-            if(key.match(/notification-.+?-end-suffix/)) {input.value = config[key]; }
+            if(/notification-stay-visible/.test(key)) { continue; }
+            if(/offset-millisec/.test(key)) { continue; }
+            if(/notification-.+?-end-suffix/.test(key)) {input.value = config[key]; }
             if(config[key]) { input.innerHTML = '設定済み'; }
         }
     }

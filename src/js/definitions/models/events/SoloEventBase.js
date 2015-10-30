@@ -11,7 +11,7 @@ var KanColleWidget = KanColleWidget || {};
 
         if(typeof this.finish != 'number') this.finish = (new Date(this.finish)).getTime();
 
-        if (this.kind.match(/createship|sortie/) == null) {
+        if (!/createship|sortie/.test(this.kind)) {
             var notifyOffset = Config.get('notification-offset-millisec');
             this.finish = this.finish - notifyOffset;
         }

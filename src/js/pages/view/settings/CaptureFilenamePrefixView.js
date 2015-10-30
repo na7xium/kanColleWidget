@@ -9,7 +9,7 @@ var widgetPages = widgetPages || {};
     };
     Util.extend(CaptureFilenamePrefixView, widgetPages.SettingTextView);
     CaptureFilenamePrefixView.prototype.validate = function(val){
-        if (val.match(/[(\\|/|:|\*|?|\"|<|>|\|)]/)) {
+        if (/[(\\|/|:|\*|?|\"|<|>|\|)]/.test(val)) {
             return "\\ / : * ? \" ' < > | 、このへんの文字列はファイル名に使えないっぽい？";
         }
         return true;

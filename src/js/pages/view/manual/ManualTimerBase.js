@@ -102,8 +102,8 @@ var widgetPages = widgetPages || {};
         window.close();
     };
     ManualTimerView.prototype.validate = function(inputs){
-        if (! inputs.hour.match(/^[0-9]+$/)) return false;
-        if (! inputs.minute.match(/^[0-9]+$/)) return false;
+        if (!/^[0-9]+$/.test(inputs.hour)) return false;
+        if (!/^[0-9]+$/.test(inputs.minute)) return false;
         return true;
     };
     ManualTimerView.prototype.showAlert = function(message){

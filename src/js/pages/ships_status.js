@@ -33,7 +33,7 @@ $(function(){
         Util.focusKCWidgetWindow();
     });
 
-    if (location.search.match(/panel=[1-9]/)) {
+    if (/panel=[1-9]/.test(location.search)) {
         // position tracking いらない
         return;
     }
