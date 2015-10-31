@@ -116,7 +116,7 @@
         },
         {
             "matches" : [
-                "http://osapi.dmm.com/gadgets/ifr?*"
+                "http://osapi.dmm.com/gadgets/ifr?*aid=854854*"
             ],
             "js" : [
                 "src/js/AssetManager.js",
